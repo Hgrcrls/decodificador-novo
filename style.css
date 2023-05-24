@@ -169,7 +169,7 @@ button {
 }
 
 .mensagem {
-  background-image: url(/imagens/msg.png);
+  background-image: url(./imagens/msg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
