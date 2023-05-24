@@ -1,0 +1,262 @@
+/* Adicione regras CSS personalizadas aqui */
+
+*{
+    font-family: 'Inter', sans-serif;
+}
+
+/* Define que não haverá margens ou preenchimento no corpo da página */
+body {
+    margin: 0;
+    padding: 0;
+    /* background-color: #F0F0F0; */
+    background-color: #1E212B;
+}
+
+/* Define o cabeçalho com um layout flexível, centralizando os itens e um fundo cinza claro */
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #1E212B;
+}
+
+/* Define que a imagem do cabeçalho terá uma largura máxima de 100% e altura automática, com uma margem direita de 10 pixels */
+.cabecalho img {
+    /* max-width: 100%; */
+    /* height: auto; */
+    margin-right: 10px;
+    max-width: 10%; 
+    height: 40px;
+}
+
+/* Define o tamanho e a margem do título do cabeçalho */
+.cabecalho h1 {
+    font-size: 24px;
+    margin: 0;
+    background: linear-gradient(to right,yellow, red );
+    /* define o escopo do fundo como o texto */
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* define a cor do texto para transparente para que a cor do gradiente possa aparecer */
+    color: transparent;
+    
+}
+
+/* Define o conteúdo principal da página como um layout flexível com colunas, centralizando os itens e adicionando um preenchimento de 20 pixels */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    /* justify-content: space-between; posiciona as seções à esquerda e à direita */
+}
+
+/* Define a margem inferior para as seções da página */
+section {
+    margin-bottom: 70px;
+}
+
+/* Define a área de texto de entrada/saída como tendo uma largura máxima de 400 pixels e um preenchimento de 10 pixels, sem permitir redimensionamento */
+.text-area {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+/* Define o estilo para o texto de informação, com texto centralizado e uma margem superior de 10 pixels */
+.informacao {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #fff;
+}
+
+h6 img {
+    margin-right: 3px;
+    max-width: 10%; 
+    height: 10px;  
+}
+
+
+/* PRIMEIRO BOTAO */
+.botoes {
+  display:flex;
+  width: 90%;
+  margin: 5px auto;
+  text-align: center;
+}
+button {
+  margin: 20px;
+}
+
+.btn-encriptar, .btn-desencriptar, .btn-copiar {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+/* ###encriptar & desencriptar### */
+.btn-encriptar, .btn-desencriptar, .btn-copiar {
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  background: rgb(255,27,0);
+  background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
+}
+.btn-encriptar:hover, .btn-desencriptar:hover {
+  color: #f0094a;
+  background: transparent;
+   box-shadow:none;
+}
+.btn-encriptar:before,
+.btn-encriptar:after,
+.btn-desencriptar:before,
+.btn-desencriptar:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #f0094a;
+  box-shadow:
+   -1px -1px 5px 0px #fff,
+   7px 7px 20px 0px #0003,
+   4px 4px 5px 0px #0002;
+  transition:400ms ease all;
+}
+.btn-encriptar:after, .btn-desencriptar:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.btn-encriptar:hover:before,
+.btn-encriptar:hover:after,
+.btn-desencriptar:hover:before,
+.btn-desencriptar:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+/* Define o estilo da área de mensagem com uma largura máxima de 400 pixels, altura de 200 pixels, um preenchimento de 10 pixels e sem redimensionamento */
+.mensagem {
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: none;
+    color: #fff;
+}
+
+.mensagem {
+  background-image: url(/imagens/msg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+}
+
+.sua-mensagem ::placeholder {
+  color: #fff;
+} 
+
+
+/* ###SEGUNDO BOTAO### */
+.botoes2 {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* copiar*/
+.btn-copiar {
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  background: rgb(255,27,0);
+/* background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%); */
+background: linear-gradient(0deg, rgba(255,151,0,1) 0%, rgba(251,75,2,1) 100%);
+}
+
+.btn-copiar:hover {
+  color: #f0094a;
+  background: transparent;
+   box-shadow:none;
+}
+
+.btn-copiar:before,
+.btn-copiar:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #f0094a;
+  box-shadow:
+   -1px -1px 5px 0px #fff,
+   7px 7px 20px 0px #0003,
+   4px 4px 5px 0px #0002;
+  transition:400ms ease all;
+}
+
+.btn-copiar:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.btn-copiar:hover:before,
+.btn-copiar:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+.mensagem-copiada {
+    font-weight: bold;
+    color: green;
+    font-size: 8px;
+
+  
+}
+
+/* botao escuro e claro */
+/* body {
+  background-color: #fff;
+  color: #222;
+}
+
+.dark-mode {
+  background-color: #222;
+  color: #fff;
+} */
+
+/* Define o rodapé com um fundo cinza claro, preenchimento de 10 pixels e texto centralizado */
+footer {
+    background-color: #1E212B;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
